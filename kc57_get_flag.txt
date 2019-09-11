@@ -1,0 +1,891 @@
+!U /d 02b11b2a
+Normal JIT generated code
+kc57_final_fu.Program.get_flag(System.String)
+Begin 02b11ae8, size df4
+02b11ae8 55              push    ebp
+02b11ae9 8bec            mov     ebp,esp
+02b11aeb 57              push    edi
+02b11aec 56              push    esi
+02b11aed 81ecd4010000    sub     esp,1D4h
+02b11af3 8bf1            mov     esi,ecx
+02b11af5 8dbd24feffff    lea     edi,[ebp-1DCh]
+02b11afb b975000000      mov     ecx,75h						#ecx = 'u'?
+02b11b00 33c0            xor     eax,eax
+02b11b02 f3ab            rep stos dword ptr es:[edi]
+02b11b04 8bce            mov     ecx,esi
+02b11b06 898dacfeffff    mov     dword ptr [ebp-154h],ecx
+02b11b0c 833de842090100  cmp     dword ptr ds:[10942E8h],0		#Does this mem addr == 0?
+02b11b13 7405            je      02b11b1a
+02b11b15 e886daa56f      call    clr!JIT_DbgIsJustMyCode (7256f5a0)
+02b11b1a 33d2            xor     edx,edx
+02b11b1c 8995a8feffff    mov     dword ptr [ebp-158h],edx		
+02b11b22 33d2            xor     edx,edx
+02b11b24 8995a4feffff    mov     dword ptr [ebp-15Ch],edx
+>>> 02b11b2a 90              nop
+02b11b2b 8b054823ca03    mov     eax,dword ptr ds:[3CA2348h] ("thisisnottheflagyouwant...")
+02b11b31 8945f4          mov     dword ptr [ebp-0Ch],eax
+02b11b34 8b8dacfeffff    mov     ecx,dword ptr [ebp-154h]
+02b11b3a 3909            cmp     dword ptr [ecx],ecx
+02b11b3c e87f07786f      call    clr!COMString::Length (722922c0)
+02b11b41 894580          mov     dword ptr [ebp-80h],eax			#User provided string
+02b11b44 837d801a        cmp     dword ptr [ebp-80h],1Ah			#is string length 26?
+02b11b48 0f95c0          setne   al
+02b11b4b 0fb6c0          movzx   eax,al
+02b11b4e 8945f0          mov     dword ptr [ebp-10h],eax
+02b11b51 837df000        cmp     dword ptr [ebp-10h],0
+02b11b55 740c            je      02b11b63
+02b11b57 8b45f4          mov     eax,dword ptr [ebp-0Ch]
+02b11b5a 8945ec          mov     dword ptr [ebp-14h],eax
+02b11b5d 90              nop
+02b11b5e e96f0d0000      jmp     02b128d2
+SYMSRV:  BYINDEX: 0x7
+         C:\ProgramData\dbg\sym
+         mscorlib.ni.pdb
+         4D331445087121506E21BF6A7438E8041
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\mscorlib.ni.pdb - path not found
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\mscorlib.ni.pd_ - path not found
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\file.ptr - path not found
+SYMSRV:  RESULT: 0x80070003
+SYMSRV:  BYINDEX: 0x8
+         C:\ProgramData\dbg\sym*https://msdl.microsoft.com/download/symbols
+         mscorlib.ni.pdb
+         4D331445087121506E21BF6A7438E8041
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\mscorlib.ni.pdb - path not found
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\mscorlib.ni.pd_ - path not found
+SYMSRV:  UNC: C:\ProgramData\dbg\sym\mscorlib.ni.pdb\4D331445087121506E21BF6A7438E8041\file.ptr - path not found
+SYMSRV:  HTTPGET: /download/symbols/mscorlib.ni.pdb/4D331445087121506E21BF6A7438E8041/mscorlib.ni.pdb
+SYMSRV:  HttpQueryInfo: 80190194 - HTTP_STATUS_NOT_FOUND
+SYMSRV:  HTTPGET: /download/symbols/mscorlib.ni.pdb/4D331445087121506E21BF6A7438E8041/mscorlib.ni.pd_
+SYMSRV:  HttpQueryInfo: 80190194 - HTTP_STATUS_NOT_FOUND
+SYMSRV:  HTTPGET: /download/symbols/mscorlib.ni.pdb/4D331445087121506E21BF6A7438E8041/file.ptr
+SYMSRV:  HttpQueryInfo: 80190194 - HTTP_STATUS_NOT_FOUND
+SYMSRV:  RESULT: 0x80190194
+DBGHELP: srv\*\mscorlib.ni.pdb - file not found
+DBGHELP: srv\*\dll\mscorlib.ni.pdb - file not found
+DBGHELP: srv\*\symbols\dll\mscorlib.ni.pdb - file not found
+DBGHELP: C:\WINDOWS\assembly\NativeImages_v4.0.30319_32\mscorlib\4d331445087121506e21bf6a7438e804\mscorlib.ni.pdb - file not found
+DBGHELP: mscorlib.ni.pdb - file not found
+*** ERROR: Module load completed but symbols could not be loaded for C:\WINDOWS\assembly\NativeImages_v4.0.30319_32\mscorlib\4d331445087121506e21bf6a7438e804\mscorlib.ni.dll
+DBGHELP: mscorlib_ni - no symbols loaded
+02b11b63 e8a865f96d      call    mscorlib_ni+0x498110 (70aa8110) (System.Text.Encoding.get_ASCII(), mdToken: 06006729)
+02b11b68 8985a0feffff    mov     dword ptr [ebp-160h],eax
+02b11b6e 8b8da0feffff    mov     ecx,dword ptr [ebp-160h]
+02b11b74 8b95acfeffff    mov     edx,dword ptr [ebp-154h]
+02b11b7a 8b01            mov     eax,dword ptr [ecx]
+02b11b7c 8b4034          mov     eax,dword ptr [eax+34h]
+02b11b7f ff5004          call    dword ptr [eax+4]
+02b11b82 89859cfeffff    mov     dword ptr [ebp-164h],eax		
+02b11b88 8b859cfeffff    mov     eax,dword ptr [ebp-164h]
+02b11b8e 8985a8feffff    mov     dword ptr [ebp-158h],eax
+02b11b94 e87765f96d      call    mscorlib_ni+0x498110 (70aa8110) (System.Text.Encoding.get_ASCII(), mdToken: 06006729)
+02b11b99 898598feffff    mov     dword ptr [ebp-168h],eax
+02b11b9f 8b8d98feffff    mov     ecx,dword ptr [ebp-168h]
+02b11ba5 8b55f4          mov     edx,dword ptr [ebp-0Ch]
+02b11ba8 8b01            mov     eax,dword ptr [ecx]
+02b11baa 8b4034          mov     eax,dword ptr [eax+34h]
+02b11bad ff5004          call    dword ptr [eax+4]
+02b11bb0 898594feffff    mov     dword ptr [ebp-16Ch],eax
+02b11bb6 8b8594feffff    mov     eax,dword ptr [ebp-16Ch]
+02b11bbc 8985a4feffff    mov     dword ptr [ebp-15Ch],eax
+02b11bc2 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11bc8 83780400        cmp     dword ptr [eax+4],0
+02b11bcc 7705            ja      02b11bd3
+02b11bce e89dc5a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11bd3 80780873        cmp     byte ptr [eax+8],73h			#cmp "s" to first user char
+02b11bd7 0f94c0          sete    al
+02b11bda 0fb6c0          movzx   eax,al
+02b11bdd 8945e8          mov     dword ptr [ebp-18h],eax
+02b11be0 837de800        cmp     dword ptr [ebp-18h],0
+02b11be4 7459            je      02b11c3f
+02b11be6 90              nop
+02b11be7 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11bed 898524feffff    mov     dword ptr [ebp-1DCh],eax
+02b11bf3 33d2            xor     edx,edx
+02b11bf5 8995b4feffff    mov     dword ptr [ebp-14Ch],edx
+02b11bfb 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11c01 83780400        cmp     dword ptr [eax+4],0
+02b11c05 7705            ja      02b11c0c
+02b11c07 e864c5a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11c0c 0fb64808        movzx   ecx,byte ptr [eax+8]
+02b11c10 83c1d8          add     ecx,0FFFFFFD8h
+02b11c13 e81cb3f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11c18 8985b0feffff    mov     dword ptr [ebp-150h],eax
+02b11c1e 8b85b4feffff    mov     eax,dword ptr [ebp-14Ch]
+02b11c24 8b9524feffff    mov     edx,dword ptr [ebp-1DCh]
+02b11c2a 3b4204          cmp     eax,dword ptr [edx+4]
+02b11c2d 7205            jb      02b11c34
+02b11c2f e83cc5a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11c34 8b8db0feffff    mov     ecx,dword ptr [ebp-150h]
+02b11c3a 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11c3e 90              nop
+02b11c3f 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11c45 83780401        cmp     dword ptr [eax+4],1
+02b11c49 7705            ja      02b11c50
+02b11c4b e820c5a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11c50 8078096f        cmp     byte ptr [eax+9],6Fh			#"o"
+02b11c54 0f94c0          sete    al
+02b11c57 0fb6c0          movzx   eax,al
+02b11c5a 8945e4          mov     dword ptr [ebp-1Ch],eax
+02b11c5d 837de400        cmp     dword ptr [ebp-1Ch],0
+02b11c61 745b            je      02b11cbe
+02b11c63 90              nop
+02b11c64 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11c6a 898528feffff    mov     dword ptr [ebp-1D8h],eax
+02b11c70 c785bcfeffff01000000 mov dword ptr [ebp-144h],1
+02b11c7a 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11c80 83780401        cmp     dword ptr [eax+4],1
+02b11c84 7705            ja      02b11c8b
+02b11c86 e8e5c4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11c8b 0fb64809        movzx   ecx,byte ptr [eax+9]
+02b11c8f 83c1f4          add     ecx,0FFFFFFF4h
+02b11c92 e89db2f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11c97 8985b8feffff    mov     dword ptr [ebp-148h],eax
+02b11c9d 8b85bcfeffff    mov     eax,dword ptr [ebp-144h]
+02b11ca3 8b9528feffff    mov     edx,dword ptr [ebp-1D8h]
+02b11ca9 3b4204          cmp     eax,dword ptr [edx+4]
+02b11cac 7205            jb      02b11cb3
+02b11cae e8bdc4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11cb3 8b8db8feffff    mov     ecx,dword ptr [ebp-148h]
+02b11cb9 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11cbd 90              nop
+02b11cbe 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11cc4 83780402        cmp     dword ptr [eax+4],2
+02b11cc8 7705            ja      02b11ccf
+02b11cca e8a1c4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11ccf 80780a6d        cmp     byte ptr [eax+0Ah],6Dh			"m"
+02b11cd3 0f94c0          sete    al
+02b11cd6 0fb6c0          movzx   eax,al
+02b11cd9 8945e0          mov     dword ptr [ebp-20h],eax
+02b11cdc 837de000        cmp     dword ptr [ebp-20h],0
+02b11ce0 745b            je      02b11d3d
+02b11ce2 90              nop
+02b11ce3 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11ce9 89852cfeffff    mov     dword ptr [ebp-1D4h],eax
+02b11cef c785c4feffff02000000 mov dword ptr [ebp-13Ch],2
+02b11cf9 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11cff 83780402        cmp     dword ptr [eax+4],2
+02b11d03 7705            ja      02b11d0a
+02b11d05 e866c4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11d0a 0fb6480a        movzx   ecx,byte ptr [eax+0Ah]
+02b11d0e 83c1c8          add     ecx,0FFFFFFC8h
+02b11d11 e81eb2f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11d16 8985c0feffff    mov     dword ptr [ebp-140h],eax
+02b11d1c 8b85c4feffff    mov     eax,dword ptr [ebp-13Ch]
+02b11d22 8b952cfeffff    mov     edx,dword ptr [ebp-1D4h]
+02b11d28 3b4204          cmp     eax,dword ptr [edx+4]
+02b11d2b 7205            jb      02b11d32
+02b11d2d e83ec4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11d32 8b8dc0feffff    mov     ecx,dword ptr [ebp-140h]
+02b11d38 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11d3c 90              nop
+02b11d3d 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11d43 83780403        cmp     dword ptr [eax+4],3
+02b11d47 7705            ja      02b11d4e
+02b11d49 e822c4a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11d4e 80780b65        cmp     byte ptr [eax+0Bh],65h			"e"
+02b11d52 0f94c0          sete    al
+02b11d55 0fb6c0          movzx   eax,al
+02b11d58 8945dc          mov     dword ptr [ebp-24h],eax
+02b11d5b 837ddc00        cmp     dword ptr [ebp-24h],0
+02b11d5f 745b            je      02b11dbc
+02b11d61 90              nop
+02b11d62 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11d68 898530feffff    mov     dword ptr [ebp-1D0h],eax
+02b11d6e c785ccfeffff03000000 mov dword ptr [ebp-134h],3
+02b11d78 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11d7e 83780403        cmp     dword ptr [eax+4],3
+02b11d82 7705            ja      02b11d89
+02b11d84 e8e7c3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11d89 0fb6480b        movzx   ecx,byte ptr [eax+0Bh]
+02b11d8d 83c1d2          add     ecx,0FFFFFFD2h
+02b11d90 e89fb1f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11d95 8985c8feffff    mov     dword ptr [ebp-138h],eax
+02b11d9b 8b85ccfeffff    mov     eax,dword ptr [ebp-134h]
+02b11da1 8b9530feffff    mov     edx,dword ptr [ebp-1D0h]
+02b11da7 3b4204          cmp     eax,dword ptr [edx+4]
+02b11daa 7205            jb      02b11db1
+02b11dac e8bfc3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11db1 8b8dc8feffff    mov     ecx,dword ptr [ebp-138h]
+02b11db7 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11dbb 90              nop
+02b11dbc 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11dc2 83780404        cmp     dword ptr [eax+4],4
+02b11dc6 7705            ja      02b11dcd
+02b11dc8 e8a3c3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11dcd 80780c74        cmp     byte ptr [eax+0Ch],74h			"t"
+02b11dd1 0f94c0          sete    al
+02b11dd4 0fb6c0          movzx   eax,al
+02b11dd7 8945d8          mov     dword ptr [ebp-28h],eax
+02b11dda 837dd800        cmp     dword ptr [ebp-28h],0
+02b11dde 745b            je      02b11e3b
+02b11de0 90              nop
+02b11de1 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11de7 898534feffff    mov     dword ptr [ebp-1CCh],eax
+02b11ded c785d4feffff04000000 mov dword ptr [ebp-12Ch],4
+02b11df7 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11dfd 83780404        cmp     dword ptr [eax+4],4
+02b11e01 7705            ja      02b11e08
+02b11e03 e868c3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11e08 0fb6480c        movzx   ecx,byte ptr [eax+0Ch]
+02b11e0c 83c1d8          add     ecx,0FFFFFFD8h
+02b11e0f e820b1f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11e14 8985d0feffff    mov     dword ptr [ebp-130h],eax
+02b11e1a 8b85d4feffff    mov     eax,dword ptr [ebp-12Ch]
+02b11e20 8b9534feffff    mov     edx,dword ptr [ebp-1CCh]
+02b11e26 3b4204          cmp     eax,dword ptr [edx+4]
+02b11e29 7205            jb      02b11e30
+02b11e2b e840c3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11e30 8b8dd0feffff    mov     ecx,dword ptr [ebp-130h]
+02b11e36 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11e3a 90              nop
+02b11e3b 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11e41 83780405        cmp     dword ptr [eax+4],5
+02b11e45 7705            ja      02b11e4c
+02b11e47 e824c3a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11e4c 80780d68        cmp     byte ptr [eax+0Dh],68h		"h"
+02b11e50 0f94c0          sete    al
+02b11e53 0fb6c0          movzx   eax,al
+02b11e56 8945d4          mov     dword ptr [ebp-2Ch],eax
+02b11e59 837dd400        cmp     dword ptr [ebp-2Ch],0
+02b11e5d 745b            je      02b11eba
+02b11e5f 90              nop
+02b11e60 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11e66 898538feffff    mov     dword ptr [ebp-1C8h],eax
+02b11e6c c785dcfeffff05000000 mov dword ptr [ebp-124h],5
+02b11e76 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11e7c 83780405        cmp     dword ptr [eax+4],5
+02b11e80 7705            ja      02b11e87
+02b11e82 e8e9c2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11e87 0fb6480d        movzx   ecx,byte ptr [eax+0Dh]
+02b11e8b 83c107          add     ecx,7
+02b11e8e e8a1b0f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11e93 8985d8feffff    mov     dword ptr [ebp-128h],eax
+02b11e99 8b85dcfeffff    mov     eax,dword ptr [ebp-124h]
+02b11e9f 8b9538feffff    mov     edx,dword ptr [ebp-1C8h]
+02b11ea5 3b4204          cmp     eax,dword ptr [edx+4]
+02b11ea8 7205            jb      02b11eaf
+02b11eaa e8c1c2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11eaf 8b8dd8feffff    mov     ecx,dword ptr [ebp-128h]
+02b11eb5 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11eb9 90              nop
+02b11eba 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11ec0 83780406        cmp     dword ptr [eax+4],6
+02b11ec4 7705            ja      02b11ecb
+02b11ec6 e8a5c2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11ecb 80780e69        cmp     byte ptr [eax+0Eh],69h			"i"
+02b11ecf 0f94c0          sete    al
+02b11ed2 0fb6c0          movzx   eax,al
+02b11ed5 8945d0          mov     dword ptr [ebp-30h],eax
+02b11ed8 837dd000        cmp     dword ptr [ebp-30h],0
+02b11edc 745b            je      02b11f39
+02b11ede 90              nop
+02b11edf 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11ee5 89853cfeffff    mov     dword ptr [ebp-1C4h],eax
+02b11eeb c785e4feffff06000000 mov dword ptr [ebp-11Ch],6
+02b11ef5 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11efb 83780406        cmp     dword ptr [eax+4],6
+02b11eff 7705            ja      02b11f06
+02b11f01 e86ac2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11f06 0fb6480e        movzx   ecx,byte ptr [eax+0Eh]
+02b11f0a 83c10d          add     ecx,0Dh
+02b11f0d e822b0f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11f12 8985e0feffff    mov     dword ptr [ebp-120h],eax
+02b11f18 8b85e4feffff    mov     eax,dword ptr [ebp-11Ch]
+02b11f1e 8b953cfeffff    mov     edx,dword ptr [ebp-1C4h]
+02b11f24 3b4204          cmp     eax,dword ptr [edx+4]
+02b11f27 7205            jb      02b11f2e
+02b11f29 e842c2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11f2e 8b8de0feffff    mov     ecx,dword ptr [ebp-120h]
+02b11f34 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11f38 90              nop
+02b11f39 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11f3f 83780407        cmp     dword ptr [eax+4],7
+02b11f43 7705            ja      02b11f4a
+02b11f45 e826c2a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11f4a 80780f6e        cmp     byte ptr [eax+0Fh],6Eh			"n"
+02b11f4e 0f94c0          sete    al
+02b11f51 0fb6c0          movzx   eax,al
+02b11f54 8945cc          mov     dword ptr [ebp-34h],eax
+02b11f57 837dcc00        cmp     dword ptr [ebp-34h],0
+02b11f5b 745b            je      02b11fb8
+02b11f5d 90              nop
+02b11f5e 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11f64 898540feffff    mov     dword ptr [ebp-1C0h],eax
+02b11f6a c785ecfeffff07000000 mov dword ptr [ebp-114h],7
+02b11f74 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11f7a 83780407        cmp     dword ptr [eax+4],7
+02b11f7e 7705            ja      02b11f85
+02b11f80 e8ebc1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11f85 0fb6480f        movzx   ecx,byte ptr [eax+0Fh]
+02b11f89 83c1f7          add     ecx,0FFFFFFF7h
+02b11f8c e8a3aff36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b11f91 8985e8feffff    mov     dword ptr [ebp-118h],eax
+02b11f97 8b85ecfeffff    mov     eax,dword ptr [ebp-114h]
+02b11f9d 8b9540feffff    mov     edx,dword ptr [ebp-1C0h]
+02b11fa3 3b4204          cmp     eax,dword ptr [edx+4]
+02b11fa6 7205            jb      02b11fad
+02b11fa8 e8c3c1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11fad 8b8de8feffff    mov     ecx,dword ptr [ebp-118h]
+02b11fb3 884c0208        mov     byte ptr [edx+eax+8],cl
+02b11fb7 90              nop
+02b11fb8 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11fbe 83780408        cmp     dword ptr [eax+4],8
+02b11fc2 7705            ja      02b11fc9
+02b11fc4 e8a7c1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b11fc9 80781067        cmp     byte ptr [eax+10h],67h			"g"
+02b11fcd 0f94c0          sete    al
+02b11fd0 0fb6c0          movzx   eax,al
+02b11fd3 8945c8          mov     dword ptr [ebp-38h],eax
+02b11fd6 837dc800        cmp     dword ptr [ebp-38h],0
+02b11fda 745b            je      02b12037
+02b11fdc 90              nop
+02b11fdd 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b11fe3 898544feffff    mov     dword ptr [ebp-1BCh],eax
+02b11fe9 c785f4feffff08000000 mov dword ptr [ebp-10Ch],8
+02b11ff3 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b11ff9 83780408        cmp     dword ptr [eax+4],8
+02b11ffd 7705            ja      02b12004
+02b11fff e86cc1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12004 0fb64810        movzx   ecx,byte ptr [eax+10h]
+02b12008 83c10c          add     ecx,0Ch
+02b1200b e824aff36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12010 8985f0feffff    mov     dword ptr [ebp-110h],eax
+02b12016 8b85f4feffff    mov     eax,dword ptr [ebp-10Ch]
+02b1201c 8b9544feffff    mov     edx,dword ptr [ebp-1BCh]
+02b12022 3b4204          cmp     eax,dword ptr [edx+4]
+02b12025 7205            jb      02b1202c
+02b12027 e844c1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b1202c 8b8df0feffff    mov     ecx,dword ptr [ebp-110h]
+02b12032 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12036 90              nop
+02b12037 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1203d 83780409        cmp     dword ptr [eax+4],9
+02b12041 7705            ja      02b12048
+02b12043 e828c1a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12048 80781169        cmp     byte ptr [eax+11h],69h			"i"
+02b1204c 0f94c0          sete    al
+02b1204f 0fb6c0          movzx   eax,al
+02b12052 8945c4          mov     dword ptr [ebp-3Ch],eax
+02b12055 837dc400        cmp     dword ptr [ebp-3Ch],0
+02b12059 745b            je      02b120b6
+02b1205b 90              nop
+02b1205c 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b12062 898548feffff    mov     dword ptr [ebp-1B8h],eax
+02b12068 c785fcfeffff09000000 mov dword ptr [ebp-104h],9
+02b12072 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12078 83780409        cmp     dword ptr [eax+4],9
+02b1207c 7705            ja      02b12083
+02b1207e e8edc0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12083 0fb64811        movzx   ecx,byte ptr [eax+11h]
+02b12087 83c1db          add     ecx,0FFFFFFDBh
+02b1208a e8a5aef36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1208f 8985f8feffff    mov     dword ptr [ebp-108h],eax
+02b12095 8b85fcfeffff    mov     eax,dword ptr [ebp-104h]
+02b1209b 8b9548feffff    mov     edx,dword ptr [ebp-1B8h]
+02b120a1 3b4204          cmp     eax,dword ptr [edx+4]
+02b120a4 7205            jb      02b120ab
+02b120a6 e8c5c0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b120ab 8b8df8feffff    mov     ecx,dword ptr [ebp-108h]
+02b120b1 884c0208        mov     byte ptr [edx+eax+8],cl
+02b120b5 90              nop
+02b120b6 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b120bc 8378040a        cmp     dword ptr [eax+4],0Ah
+02b120c0 7705            ja      02b120c7
+02b120c2 e8a9c0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b120c7 80781273        cmp     byte ptr [eax+12h],73h			"s"
+02b120cb 0f94c0          sete    al
+02b120ce 0fb6c0          movzx   eax,al
+02b120d1 8945c0          mov     dword ptr [ebp-40h],eax
+02b120d4 837dc000        cmp     dword ptr [ebp-40h],0
+02b120d8 745b            je      02b12135
+02b120da 90              nop
+02b120db 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b120e1 89854cfeffff    mov     dword ptr [ebp-1B4h],eax
+02b120e7 c78504ffffff0a000000 mov dword ptr [ebp-0FCh],0Ah
+02b120f1 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b120f7 8378040a        cmp     dword ptr [eax+4],0Ah
+02b120fb 7705            ja      02b12102
+02b120fd e86ec0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12102 0fb64812        movzx   ecx,byte ptr [eax+12h]
+02b12106 83c1fc          add     ecx,0FFFFFFFCh
+02b12109 e826aef36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1210e 898500ffffff    mov     dword ptr [ebp-100h],eax
+02b12114 8b8504ffffff    mov     eax,dword ptr [ebp-0FCh]
+02b1211a 8b954cfeffff    mov     edx,dword ptr [ebp-1B4h]
+02b12120 3b4204          cmp     eax,dword ptr [edx+4]
+02b12123 7205            jb      02b1212a
+02b12125 e846c0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b1212a 8b8d00ffffff    mov     ecx,dword ptr [ebp-100h]
+02b12130 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12134 90              nop
+02b12135 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1213b 8378040b        cmp     dword ptr [eax+4],0Bh
+02b1213f 7705            ja      02b12146
+02b12141 e82ac0a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12146 8078136e        cmp     byte ptr [eax+13h],6Eh			"n"
+02b1214a 0f94c0          sete    al
+02b1214d 0fb6c0          movzx   eax,al
+02b12150 8945bc          mov     dword ptr [ebp-44h],eax
+02b12153 837dbc00        cmp     dword ptr [ebp-44h],0
+02b12157 745b            je      02b121b4
+02b12159 90              nop
+02b1215a 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b12160 898550feffff    mov     dword ptr [ebp-1B0h],eax
+02b12166 c7850cffffff0b000000 mov dword ptr [ebp-0F4h],0Bh
+02b12170 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12176 8378040b        cmp     dword ptr [eax+4],0Bh
+02b1217a 7705            ja      02b12181
+02b1217c e8efbfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12181 0fb64813        movzx   ecx,byte ptr [eax+13h]
+02b12185 83c106          add     ecx,6
+02b12188 e8a7adf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1218d 898508ffffff    mov     dword ptr [ebp-0F8h],eax
+02b12193 8b850cffffff    mov     eax,dword ptr [ebp-0F4h]
+02b12199 8b9550feffff    mov     edx,dword ptr [ebp-1B0h]
+02b1219f 3b4204          cmp     eax,dword ptr [edx+4]
+02b121a2 7205            jb      02b121a9
+02b121a4 e8c7bfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b121a9 8b8d08ffffff    mov     ecx,dword ptr [ebp-0F8h]
+02b121af 884c0208        mov     byte ptr [edx+eax+8],cl
+02b121b3 90              nop
+02b121b4 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b121ba 8378040c        cmp     dword ptr [eax+4],0Ch
+02b121be 7705            ja      02b121c5
+02b121c0 e8abbfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b121c5 8078146f        cmp     byte ptr [eax+14h],6Fh			"o"
+02b121c9 0f94c0          sete    al
+02b121cc 0fb6c0          movzx   eax,al
+02b121cf 8945b8          mov     dword ptr [ebp-48h],eax
+02b121d2 837db800        cmp     dword ptr [ebp-48h],0
+02b121d6 745b            je      02b12233
+02b121d8 90              nop
+02b121d9 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b121df 898554feffff    mov     dword ptr [ebp-1ACh],eax
+02b121e5 c78514ffffff0c000000 mov dword ptr [ebp-0ECh],0Ch
+02b121ef 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b121f5 8378040c        cmp     dword ptr [eax+4],0Ch
+02b121f9 7705            ja      02b12200
+02b121fb e870bfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12200 0fb64814        movzx   ecx,byte ptr [eax+14h]
+02b12204 83c1df          add     ecx,0FFFFFFDFh
+02b12207 e828adf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1220c 898510ffffff    mov     dword ptr [ebp-0F0h],eax
+02b12212 8b8514ffffff    mov     eax,dword ptr [ebp-0ECh]
+02b12218 8b9554feffff    mov     edx,dword ptr [ebp-1ACh]
+02b1221e 3b4204          cmp     eax,dword ptr [edx+4]
+02b12221 7205            jb      02b12228
+02b12223 e848bfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12228 8b8d10ffffff    mov     ecx,dword ptr [ebp-0F0h]
+02b1222e 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12232 90              nop
+02b12233 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12239 8378040d        cmp     dword ptr [eax+4],0Dh
+02b1223d 7705            ja      02b12244
+02b1223f e82cbfa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12244 80781574        cmp     byte ptr [eax+15h],74h			"t"
+02b12248 0f94c0          sete    al
+02b1224b 0fb6c0          movzx   eax,al
+02b1224e 8945b4          mov     dword ptr [ebp-4Ch],eax
+02b12251 837db400        cmp     dword ptr [ebp-4Ch],0
+02b12255 745b            je      02b122b2
+02b12257 90              nop
+02b12258 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b1225e 898558feffff    mov     dword ptr [ebp-1A8h],eax
+02b12264 c7851cffffff0d000000 mov dword ptr [ebp-0E4h],0Dh
+02b1226e 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12274 8378040d        cmp     dword ptr [eax+4],0Dh
+02b12278 7705            ja      02b1227f
+02b1227a e8f1bea56f      call    clr!JIT_RngChkFail (7256e170)
+02b1227f 0fb64815        movzx   ecx,byte ptr [eax+15h]
+02b12283 83c1f1          add     ecx,0FFFFFFF1h
+02b12286 e8a9acf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1228b 898518ffffff    mov     dword ptr [ebp-0E8h],eax
+02b12291 8b851cffffff    mov     eax,dword ptr [ebp-0E4h]
+02b12297 8b9558feffff    mov     edx,dword ptr [ebp-1A8h]
+02b1229d 3b4204          cmp     eax,dword ptr [edx+4]
+02b122a0 7205            jb      02b122a7
+02b122a2 e8c9bea56f      call    clr!JIT_RngChkFail (7256e170)
+02b122a7 8b8d18ffffff    mov     ecx,dword ptr [ebp-0E8h]
+02b122ad 884c0208        mov     byte ptr [edx+eax+8],cl
+02b122b1 90              nop
+02b122b2 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b122b8 8378040e        cmp     dword ptr [eax+4],0Eh
+02b122bc 7705            ja      02b122c3
+02b122be e8adbea56f      call    clr!JIT_RngChkFail (7256e170)
+02b122c3 80781672        cmp     byte ptr [eax+16h],72h
+02b122c7 0f94c0          sete    al
+02b122ca 0fb6c0          movzx   eax,al
+02b122cd 8945b0          mov     dword ptr [ebp-50h],eax
+02b122d0 837db000        cmp     dword ptr [ebp-50h],0
+02b122d4 745a            je      02b12330
+02b122d6 90              nop
+02b122d7 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b122dd 89855cfeffff    mov     dword ptr [ebp-1A4h],eax
+02b122e3 c78524ffffff0e000000 mov dword ptr [ebp-0DCh],0Eh
+02b122ed 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b122f3 8378040e        cmp     dword ptr [eax+4],0Eh
+02b122f7 7705            ja      02b122fe
+02b122f9 e872bea56f      call    clr!JIT_RngChkFail (7256e170)
+02b122fe 0fb64816        movzx   ecx,byte ptr [eax+16h]
+02b12302 41              inc     ecx
+02b12303 41              inc     ecx
+02b12304 e82bacf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12309 898520ffffff    mov     dword ptr [ebp-0E0h],eax
+02b1230f 8b8524ffffff    mov     eax,dword ptr [ebp-0DCh]
+02b12315 8b955cfeffff    mov     edx,dword ptr [ebp-1A4h]
+02b1231b 3b4204          cmp     eax,dword ptr [edx+4]
+02b1231e 7205            jb      02b12325
+02b12320 e84bbea56f      call    clr!JIT_RngChkFail (7256e170)
+02b12325 8b8d20ffffff    mov     ecx,dword ptr [ebp-0E0h]
+02b1232b 884c0208        mov     byte ptr [edx+eax+8],cl
+02b1232f 90              nop
+02b12330 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12336 8378040f        cmp     dword ptr [eax+4],0Fh
+02b1233a 7705            ja      02b12341
+02b1233c e82fbea56f      call    clr!JIT_RngChkFail (7256e170)
+02b12341 80781769        cmp     byte ptr [eax+17h],69h
+02b12345 0f94c0          sete    al
+02b12348 0fb6c0          movzx   eax,al
+02b1234b 8945ac          mov     dword ptr [ebp-54h],eax
+02b1234e 837dac00        cmp     dword ptr [ebp-54h],0
+02b12352 745b            je      02b123af
+02b12354 90              nop
+02b12355 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b1235b 898560feffff    mov     dword ptr [ebp-1A0h],eax
+02b12361 c7852cffffff0f000000 mov dword ptr [ebp-0D4h],0Fh
+02b1236b 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12371 8378040f        cmp     dword ptr [eax+4],0Fh
+02b12375 7705            ja      02b1237c
+02b12377 e8f4bda56f      call    clr!JIT_RngChkFail (7256e170)
+02b1237c 0fb64817        movzx   ecx,byte ptr [eax+17h]
+02b12380 83c1e6          add     ecx,0FFFFFFE6h
+02b12383 e8acabf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12388 898528ffffff    mov     dword ptr [ebp-0D8h],eax
+02b1238e 8b852cffffff    mov     eax,dword ptr [ebp-0D4h]
+02b12394 8b9560feffff    mov     edx,dword ptr [ebp-1A0h]
+02b1239a 3b4204          cmp     eax,dword ptr [edx+4]
+02b1239d 7205            jb      02b123a4
+02b1239f e8ccbda56f      call    clr!JIT_RngChkFail (7256e170)
+02b123a4 8b8d28ffffff    mov     ecx,dword ptr [ebp-0D8h]
+02b123aa 884c0208        mov     byte ptr [edx+eax+8],cl
+02b123ae 90              nop
+02b123af 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b123b5 83780410        cmp     dword ptr [eax+4],10h
+02b123b9 7705            ja      02b123c0
+02b123bb e8b0bda56f      call    clr!JIT_RngChkFail (7256e170)
+02b123c0 80781867        cmp     byte ptr [eax+18h],67h
+02b123c4 0f94c0          sete    al
+02b123c7 0fb6c0          movzx   eax,al
+02b123ca 8945a8          mov     dword ptr [ebp-58h],eax
+02b123cd 837da800        cmp     dword ptr [ebp-58h],0
+02b123d1 745b            je      02b1242e
+02b123d3 90              nop
+02b123d4 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b123da 898564feffff    mov     dword ptr [ebp-19Ch],eax
+02b123e0 c78534ffffff10000000 mov dword ptr [ebp-0CCh],10h
+02b123ea 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b123f0 83780410        cmp     dword ptr [eax+4],10h
+02b123f4 7705            ja      02b123fb
+02b123f6 e875bda56f      call    clr!JIT_RngChkFail (7256e170)
+02b123fb 0fb64818        movzx   ecx,byte ptr [eax+18h]
+02b123ff 83c1fb          add     ecx,0FFFFFFFBh
+02b12402 e82dabf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12407 898530ffffff    mov     dword ptr [ebp-0D0h],eax
+02b1240d 8b8534ffffff    mov     eax,dword ptr [ebp-0CCh]
+02b12413 8b9564feffff    mov     edx,dword ptr [ebp-19Ch]
+02b12419 3b4204          cmp     eax,dword ptr [edx+4]
+02b1241c 7205            jb      02b12423
+02b1241e e84dbda56f      call    clr!JIT_RngChkFail (7256e170)
+02b12423 8b8d30ffffff    mov     ecx,dword ptr [ebp-0D0h]
+02b12429 884c0208        mov     byte ptr [edx+eax+8],cl
+02b1242d 90              nop
+02b1242e 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12434 83780411        cmp     dword ptr [eax+4],11h
+02b12438 7705            ja      02b1243f
+02b1243a e831bda56f      call    clr!JIT_RngChkFail (7256e170)
+02b1243f 80781968        cmp     byte ptr [eax+19h],68h
+02b12443 0f94c0          sete    al
+02b12446 0fb6c0          movzx   eax,al
+02b12449 8945a4          mov     dword ptr [ebp-5Ch],eax
+02b1244c 837da400        cmp     dword ptr [ebp-5Ch],0
+02b12450 745a            je      02b124ac
+02b12452 90              nop
+02b12453 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b12459 898568feffff    mov     dword ptr [ebp-198h],eax
+02b1245f c7853cffffff11000000 mov dword ptr [ebp-0C4h],11h
+02b12469 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1246f 83780411        cmp     dword ptr [eax+4],11h
+02b12473 7705            ja      02b1247a
+02b12475 e8f6bca56f      call    clr!JIT_RngChkFail (7256e170)
+02b1247a 0fb64819        movzx   ecx,byte ptr [eax+19h]
+02b1247e 49              dec     ecx
+02b1247f 49              dec     ecx
+02b12480 e8afaaf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12485 898538ffffff    mov     dword ptr [ebp-0C8h],eax
+02b1248b 8b853cffffff    mov     eax,dword ptr [ebp-0C4h]
+02b12491 8b9568feffff    mov     edx,dword ptr [ebp-198h]
+02b12497 3b4204          cmp     eax,dword ptr [edx+4]
+02b1249a 7205            jb      02b124a1
+02b1249c e8cfbca56f      call    clr!JIT_RngChkFail (7256e170)
+02b124a1 8b8d38ffffff    mov     ecx,dword ptr [ebp-0C8h]
+02b124a7 884c0208        mov     byte ptr [edx+eax+8],cl
+02b124ab 90              nop
+02b124ac 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b124b2 83780412        cmp     dword ptr [eax+4],12h
+02b124b6 7705            ja      02b124bd
+02b124b8 e8b3bca56f      call    clr!JIT_RngChkFail (7256e170)
+02b124bd 80781a74        cmp     byte ptr [eax+1Ah],74h
+02b124c1 0f94c0          sete    al
+02b124c4 0fb6c0          movzx   eax,al
+02b124c7 8945a0          mov     dword ptr [ebp-60h],eax
+02b124ca 837da000        cmp     dword ptr [ebp-60h],0
+02b124ce 7459            je      02b12529
+02b124d0 90              nop
+02b124d1 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b124d7 89856cfeffff    mov     dword ptr [ebp-194h],eax
+02b124dd c78544ffffff12000000 mov dword ptr [ebp-0BCh],12h
+02b124e7 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b124ed 83780412        cmp     dword ptr [eax+4],12h
+02b124f1 7705            ja      02b124f8
+02b124f3 e878bca56f      call    clr!JIT_RngChkFail (7256e170)
+02b124f8 0fb6481a        movzx   ecx,byte ptr [eax+1Ah]
+02b124fc 41              inc     ecx
+02b124fd e832aaf36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12502 898540ffffff    mov     dword ptr [ebp-0C0h],eax
+02b12508 8b8544ffffff    mov     eax,dword ptr [ebp-0BCh]
+02b1250e 8b956cfeffff    mov     edx,dword ptr [ebp-194h]
+02b12514 3b4204          cmp     eax,dword ptr [edx+4]
+02b12517 7205            jb      02b1251e
+02b12519 e852bca56f      call    clr!JIT_RngChkFail (7256e170)
+02b1251e 8b8d40ffffff    mov     ecx,dword ptr [ebp-0C0h]
+02b12524 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12528 90              nop
+02b12529 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1252f 83780413        cmp     dword ptr [eax+4],13h
+02b12533 7705            ja      02b1253a
+02b12535 e836bca56f      call    clr!JIT_RngChkFail (7256e170)
+02b1253a 80781b68        cmp     byte ptr [eax+1Bh],68h
+02b1253e 0f94c0          sete    al
+02b12541 0fb6c0          movzx   eax,al
+02b12544 89459c          mov     dword ptr [ebp-64h],eax
+02b12547 837d9c00        cmp     dword ptr [ebp-64h],0
+02b1254b 745b            je      02b125a8
+02b1254d 90              nop
+02b1254e 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b12554 898570feffff    mov     dword ptr [ebp-190h],eax
+02b1255a c7854cffffff13000000 mov dword ptr [ebp-0B4h],13h
+02b12564 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1256a 83780413        cmp     dword ptr [eax+4],13h
+02b1256e 7705            ja      02b12575
+02b12570 e8fbbba56f      call    clr!JIT_RngChkFail (7256e170)
+02b12575 0fb6481b        movzx   ecx,byte ptr [eax+1Bh]
+02b12579 83c10b          add     ecx,0Bh
+02b1257c e8b3a9f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b12581 898548ffffff    mov     dword ptr [ebp-0B8h],eax
+02b12587 8b854cffffff    mov     eax,dword ptr [ebp-0B4h]
+02b1258d 8b9570feffff    mov     edx,dword ptr [ebp-190h]
+02b12593 3b4204          cmp     eax,dword ptr [edx+4]
+02b12596 7205            jb      02b1259d
+02b12598 e8d3bba56f      call    clr!JIT_RngChkFail (7256e170)
+02b1259d 8b8d48ffffff    mov     ecx,dword ptr [ebp-0B8h]
+02b125a3 884c0208        mov     byte ptr [edx+eax+8],cl
+02b125a7 90              nop
+02b125a8 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b125ae 83780414        cmp     dword ptr [eax+4],14h
+02b125b2 7705            ja      02b125b9
+02b125b4 e8b7bba56f      call    clr!JIT_RngChkFail (7256e170)
+02b125b9 80781c65        cmp     byte ptr [eax+1Ch],65h
+02b125bd 0f94c0          sete    al
+02b125c0 0fb6c0          movzx   eax,al
+02b125c3 894598          mov     dword ptr [ebp-68h],eax
+02b125c6 837d9800        cmp     dword ptr [ebp-68h],0
+02b125ca 745a            je      02b12626
+02b125cc 90              nop
+02b125cd 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b125d3 898574feffff    mov     dword ptr [ebp-18Ch],eax
+02b125d9 c78554ffffff14000000 mov dword ptr [ebp-0ACh],14h
+02b125e3 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b125e9 83780414        cmp     dword ptr [eax+4],14h
+02b125ed 7705            ja      02b125f4
+02b125ef e87cbba56f      call    clr!JIT_RngChkFail (7256e170)
+02b125f4 0fb6481c        movzx   ecx,byte ptr [eax+1Ch]
+02b125f8 49              dec     ecx
+02b125f9 49              dec     ecx
+02b125fa e835a9f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b125ff 898550ffffff    mov     dword ptr [ebp-0B0h],eax
+02b12605 8b8554ffffff    mov     eax,dword ptr [ebp-0ACh]
+02b1260b 8b9574feffff    mov     edx,dword ptr [ebp-18Ch]
+02b12611 3b4204          cmp     eax,dword ptr [edx+4]
+02b12614 7205            jb      02b1261b
+02b12616 e855bba56f      call    clr!JIT_RngChkFail (7256e170)
+02b1261b 8b8d50ffffff    mov     ecx,dword ptr [ebp-0B0h]
+02b12621 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12625 90              nop
+02b12626 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1262c 83780415        cmp     dword ptr [eax+4],15h
+02b12630 7705            ja      02b12637
+02b12632 e839bba56f      call    clr!JIT_RngChkFail (7256e170)
+02b12637 80781d72        cmp     byte ptr [eax+1Dh],72h
+02b1263b 0f94c0          sete    al
+02b1263e 0fb6c0          movzx   eax,al
+02b12641 894594          mov     dword ptr [ebp-6Ch],eax
+02b12644 837d9400        cmp     dword ptr [ebp-6Ch],0
+02b12648 745b            je      02b126a5
+02b1264a 90              nop
+02b1264b 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b12651 898578feffff    mov     dword ptr [ebp-188h],eax
+02b12657 c7855cffffff15000000 mov dword ptr [ebp-0A4h],15h
+02b12661 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12667 83780415        cmp     dword ptr [eax+4],15h
+02b1266b 7705            ja      02b12672
+02b1266d e8febaa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12672 0fb6481d        movzx   ecx,byte ptr [eax+1Dh]
+02b12676 83c1ef          add     ecx,0FFFFFFEFh
+02b12679 e8b6a8f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1267e 898558ffffff    mov     dword ptr [ebp-0A8h],eax
+02b12684 8b855cffffff    mov     eax,dword ptr [ebp-0A4h]
+02b1268a 8b9578feffff    mov     edx,dword ptr [ebp-188h]
+02b12690 3b4204          cmp     eax,dword ptr [edx+4]
+02b12693 7205            jb      02b1269a
+02b12695 e8d6baa56f      call    clr!JIT_RngChkFail (7256e170)
+02b1269a 8b8d58ffffff    mov     ecx,dword ptr [ebp-0A8h]
+02b126a0 884c0208        mov     byte ptr [edx+eax+8],cl
+02b126a4 90              nop
+02b126a5 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b126ab 83780416        cmp     dword ptr [eax+4],16h
+02b126af 7705            ja      02b126b6
+02b126b1 e8babaa56f      call    clr!JIT_RngChkFail (7256e170)
+02b126b6 80781e65        cmp     byte ptr [eax+1Eh],65h
+02b126ba 0f94c0          sete    al
+02b126bd 0fb6c0          movzx   eax,al
+02b126c0 894590          mov     dword ptr [ebp-70h],eax
+02b126c3 837d9000        cmp     dword ptr [ebp-70h],0
+02b126c7 745b            je      02b12724
+02b126c9 90              nop
+02b126ca 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b126d0 89857cfeffff    mov     dword ptr [ebp-184h],eax
+02b126d6 c78564ffffff16000000 mov dword ptr [ebp-9Ch],16h
+02b126e0 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b126e6 83780416        cmp     dword ptr [eax+4],16h
+02b126ea 7705            ja      02b126f1
+02b126ec e87fbaa56f      call    clr!JIT_RngChkFail (7256e170)
+02b126f1 0fb6481e        movzx   ecx,byte ptr [eax+1Eh]
+02b126f5 83c10f          add     ecx,0Fh
+02b126f8 e837a8f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b126fd 898560ffffff    mov     dword ptr [ebp-0A0h],eax
+02b12703 8b8564ffffff    mov     eax,dword ptr [ebp-9Ch]
+02b12709 8b957cfeffff    mov     edx,dword ptr [ebp-184h]
+02b1270f 3b4204          cmp     eax,dword ptr [edx+4]
+02b12712 7205            jb      02b12719
+02b12714 e857baa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12719 8b8d60ffffff    mov     ecx,dword ptr [ebp-0A0h]
+02b1271f 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12723 90              nop
+02b12724 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b1272a 83780417        cmp     dword ptr [eax+4],17h
+02b1272e 7705            ja      02b12735
+02b12730 e83bbaa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12735 80781f2e        cmp     byte ptr [eax+1Fh],2Eh
+02b12739 0f94c0          sete    al
+02b1273c 0fb6c0          movzx   eax,al
+02b1273f 89458c          mov     dword ptr [ebp-74h],eax
+02b12742 837d8c00        cmp     dword ptr [ebp-74h],0
+02b12746 745b            je      02b127a3
+02b12748 90              nop
+02b12749 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b1274f 898580feffff    mov     dword ptr [ebp-180h],eax
+02b12755 c7856cffffff17000000 mov dword ptr [ebp-94h],17h
+02b1275f 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12765 83780417        cmp     dword ptr [eax+4],17h
+02b12769 7705            ja      02b12770
+02b1276b e800baa56f      call    clr!JIT_RngChkFail (7256e170)
+02b12770 0fb6481f        movzx   ecx,byte ptr [eax+1Fh]
+02b12774 83c13b          add     ecx,3Bh
+02b12777 e8b8a7f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1277c 898568ffffff    mov     dword ptr [ebp-98h],eax
+02b12782 8b856cffffff    mov     eax,dword ptr [ebp-94h]
+02b12788 8b9580feffff    mov     edx,dword ptr [ebp-180h]
+02b1278e 3b4204          cmp     eax,dword ptr [edx+4]
+02b12791 7205            jb      02b12798
+02b12793 e8d8b9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12798 8b8d68ffffff    mov     ecx,dword ptr [ebp-98h]
+02b1279e 884c0208        mov     byte ptr [edx+eax+8],cl
+02b127a2 90              nop
+02b127a3 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b127a9 83780418        cmp     dword ptr [eax+4],18h
+02b127ad 7705            ja      02b127b4
+02b127af e8bcb9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b127b4 8078202e        cmp     byte ptr [eax+20h],2Eh
+02b127b8 0f94c0          sete    al
+02b127bb 0fb6c0          movzx   eax,al
+02b127be 894588          mov     dword ptr [ebp-78h],eax
+02b127c1 837d8800        cmp     dword ptr [ebp-78h],0
+02b127c5 745b            je      02b12822
+02b127c7 90              nop
+02b127c8 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b127ce 898584feffff    mov     dword ptr [ebp-17Ch],eax
+02b127d4 c78574ffffff18000000 mov dword ptr [ebp-8Ch],18h
+02b127de 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b127e4 83780418        cmp     dword ptr [eax+4],18h
+02b127e8 7705            ja      02b127ef
+02b127ea e881b9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b127ef 0fb64820        movzx   ecx,byte ptr [eax+20h]
+02b127f3 83c141          add     ecx,41h
+02b127f6 e839a7f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b127fb 898570ffffff    mov     dword ptr [ebp-90h],eax
+02b12801 8b8574ffffff    mov     eax,dword ptr [ebp-8Ch]
+02b12807 8b9584feffff    mov     edx,dword ptr [ebp-17Ch]
+02b1280d 3b4204          cmp     eax,dword ptr [edx+4]
+02b12810 7205            jb      02b12817
+02b12812 e859b9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12817 8b8d70ffffff    mov     ecx,dword ptr [ebp-90h]
+02b1281d 884c0208        mov     byte ptr [edx+eax+8],cl
+02b12821 90              nop
+02b12822 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12828 83780419        cmp     dword ptr [eax+4],19h
+02b1282c 7705            ja      02b12833
+02b1282e e83db9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12833 8078212e        cmp     byte ptr [eax+21h],2Eh
+02b12837 0f94c0          sete    al
+02b1283a 0fb6c0          movzx   eax,al
+02b1283d 894584          mov     dword ptr [ebp-7Ch],eax
+02b12840 837d8400        cmp     dword ptr [ebp-7Ch],0
+02b12844 745b            je      02b128a1
+02b12846 90              nop
+02b12847 8b85a4feffff    mov     eax,dword ptr [ebp-15Ch]
+02b1284d 898588feffff    mov     dword ptr [ebp-178h],eax
+02b12853 c7857cffffff19000000 mov dword ptr [ebp-84h],19h
+02b1285d 8b85a8feffff    mov     eax,dword ptr [ebp-158h]
+02b12863 83780419        cmp     dword ptr [eax+4],19h
+02b12867 7705            ja      02b1286e
+02b12869 e802b9a56f      call    clr!JIT_RngChkFail (7256e170)
+02b1286e 0fb64821        movzx   ecx,byte ptr [eax+21h]
+02b12872 83c140          add     ecx,40h
+02b12875 e8baa6f36d      call    mscorlib_ni+0x43cf34 (70a4cf34) (System.Convert.ToByte(Int32), mdToken: 06000beb)
+02b1287a 898578ffffff    mov     dword ptr [ebp-88h],eax
+02b12880 8b857cffffff    mov     eax,dword ptr [ebp-84h]
+02b12886 8b9588feffff    mov     edx,dword ptr [ebp-178h]
+02b1288c 3b4204          cmp     eax,dword ptr [edx+4]
+02b1288f 7205            jb      02b12896
+02b12891 e8dab8a56f      call    clr!JIT_RngChkFail (7256e170)
+02b12896 8b8d78ffffff    mov     ecx,dword ptr [ebp-88h]
+02b1289c 884c0208        mov     byte ptr [edx+eax+8],cl
+02b128a0 90              nop
+02b128a1 e86a58f96d      call    mscorlib_ni+0x498110 (70aa8110) (System.Text.Encoding.get_ASCII(), mdToken: 06006729)
+02b128a6 898590feffff    mov     dword ptr [ebp-170h],eax
+02b128ac 8b8d90feffff    mov     ecx,dword ptr [ebp-170h]
+02b128b2 8b95a4feffff    mov     edx,dword ptr [ebp-15Ch]
+02b128b8 8b01            mov     eax,dword ptr [ecx]
+02b128ba 8b403c          mov     eax,dword ptr [eax+3Ch]
+02b128bd ff5010          call    dword ptr [eax+10h]
+02b128c0 89858cfeffff    mov     dword ptr [ebp-174h],eax
+02b128c6 8b858cfeffff    mov     eax,dword ptr [ebp-174h]
+02b128cc 8945ec          mov     dword ptr [ebp-14h],eax
+02b128cf 90              nop
+02b128d0 eb00            jmp     02b128d2
+02b128d2 8b45ec          mov     eax,dword ptr [ebp-14h]
+02b128d5 8d65f8          lea     esp,[ebp-8]
+02b128d8 5e              pop     esi
+02b128d9 5f              pop     edi
+02b128da 5d              pop     ebp
+02b128db c3              ret
